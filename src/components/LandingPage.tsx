@@ -68,7 +68,7 @@ function LandingPage({ onExplore }: LandingPageProps) {
       </div>
 
       <footer className="absolute bottom-0 left-0 right-0 py-6 text-center text-gray-400 text-sm z-10">
-        <p>Powered by A-Frame & Three.js</p>
+        <p></p>
       </footer>
     </div>
   );
