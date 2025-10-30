@@ -1,4 +1,4 @@
-// src/components/PanoramaViewer.tsx
+
 import React, { useEffect } from "react";
 import "aframe";
 import type { Location } from "../types";
@@ -13,10 +13,10 @@ const PanoramaViewer: React.FC<PanoramaViewerProps> = ({
   onBackToMap,
 }) => {
   useEffect(() => {
-    // update the sky image whenever location changes
+    
     const sky = document.getElementById("sky");
     if (sky) {
-      // You can adjust path according to where you store your 360 images
+     
       sky.setAttribute("src", `/assets/${location.id}.jpg`);
     }
   }, [location]);
@@ -37,14 +37,14 @@ const PanoramaViewer: React.FC<PanoramaViewerProps> = ({
 
       <a-scene embedded vr-mode-ui="enabled: false" style={{ height: "100%", width: "100%" }}>
         <a-assets>
-          {/* preload panorama image */}
+          {}
           <img id={location.id} src={`/assets/${location.id}.jpg`} alt={location.name} />
         </a-assets>
 
-        {/* main panorama */}
+        {}
         <a-sky id="sky" src={`#${location.id}`} rotation="0 -90 0"></a-sky>
 
-        {/* camera with cursor */}
+        {}
         <a-entity camera look-controls position="0 1.6 0">
           <a-entity
             cursor="rayOrigin: mouse"
